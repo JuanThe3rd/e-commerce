@@ -5,3 +5,14 @@
   --text: hsla(0, 0%, 100%, 0.88);
 }
 
+.main-title {
+  background-color: rgb(192, 231, 238);
+  font-family: sans-serif, optima;
+  height: 3rem;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  text-align: left;
+  width: 100vw;
+}
