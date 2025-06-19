@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
+import Home from './Home';
 
 function App() {
-  return <h1 className="main-title">JMB Market</h1>;
+  return (
+    <Switch>
+      <Route exact path='/'>
+        {<Home />}
+      </Route>
+    </Switch>
+  );
 }
 
 export default App;

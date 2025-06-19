@@ -5,14 +5,41 @@
   --text: hsla(0, 0%, 100%, 0.88);
 }
 
-.main-title {
+.food-container {
+  
+}
+
+.home-header {
   background-color: rgb(192, 231, 238);
-  font-family: sans-serif, optima;
   height: 3rem;
   margin-top: -0.5rem;
   margin-left: -0.5rem;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
-  text-align: left;
+  position: absolute;
   width: 100vw;
+}
+
+.home-title {
+  cursor: pointer;
+  font-family: sans-serif, optima;
+  height: 2rem;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+}
+
+.hamburger-menu {
+  border-radius: 5px;
+  border-width: 0px;
+  height: 2.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.25rem;
+  width: 2.5rem;
+}
+
+.hamburger-menu:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.hamburger-menu-img {
+  width: 1.5rem;
 }
