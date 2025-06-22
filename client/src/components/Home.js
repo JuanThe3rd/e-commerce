@@ -15,20 +15,28 @@ function Home(){
     }, []);
 
     return (
-        <div>
-            <div class='home-header'>
+        <page>
+            <header className ='home-header'>
                 <h1 class='home-title'>JMB Market</h1>
+                <img class='home-logo' src='https://static.vecteezy.com/system/resources/previews/015/100/030/non_2x/apple-transparent-background-free-png.png' alt='Logo'/>
+                <button class='cart-bttn'>
+                    <img class ='cart-bttn-img' src='https://cdn.creazilla.com/icons/3247973/shopping-cart-add-icon-lg.png' alt='Cart'/>
+                </button>
                 <button class='hamburger-menu'>
                     <img class='hamburger-menu-img' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png' alt='Menu'/>
                 </button>
-            </div>
+            </header>
 
             <div class='food-container'>
                 {foods?.map((food) => (
                     <FoodCard key={food.id} product={food}/>
                 ))}
             </div>
-        </div>
+
+            <footer class='home-footer'>
+                This is the bottom of the website.
+            </footer>
+        </page>
     );
 }
 
