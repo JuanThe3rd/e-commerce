@@ -25,7 +25,7 @@ function Home(){
 
             <div class='food-container'>
                 {foods?.map((food) => (
-                    <FoodCard />
+                    <FoodCard key={food.id} product={food}/>
                 ))}
             </div>
         </div>

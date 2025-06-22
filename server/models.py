@@ -29,7 +29,7 @@ class Account(db.Model, SerializerMixin):
     
     def __repr__(self):
         return f'<Account Name: {self.firstname} {self.lastname} />'
-    
+
 class OrderProductAssociation(db.Model, SerializerMixin):
     __tablename__ = 'order_product_associations'
 
