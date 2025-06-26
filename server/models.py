@@ -56,6 +56,7 @@ class Product(db.Model, SerializerMixin):
     name = db.Column(db.String, nullable=False)
     category = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
+    quantity = db.Column(db.String)
     image = db.Column(db.String, nullable=False)
 
     def to_dict(self):
@@ -64,6 +65,7 @@ class Product(db.Model, SerializerMixin):
             'name': self.name,
             'category': self.category,
             'price': self.price,
+            'quantity': self.quantity,
             'image': self.image
         }
     

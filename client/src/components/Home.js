@@ -7,11 +7,27 @@ function Home(){
     const location = useLocation();
 
     const [foods, setFoods] = useState();
+    const [veggies, setVeggies] = useState();
+    const [fruits, setFruits] = useState();
 
     useEffect(() => {
         fetch('/products')
             .then(res => res.json())
-            .then(setFoods)
+            .then(foods => {
+                const temp_fruits = [];
+                const temp_veggies = [];
+
+                for(let i = 0; i < foods.length; i++){
+                    if(foods[i].category === 'fruit'){
+                        temp_fruits.push(foods[i]);
+                    } else if (foods[i].category === 'vegetable'){
+                        temp_veggies.push(foods[i]);
+                    }
+                }
+
+                setVeggies(temp_veggies);
+                setFruits(temp_fruits);
+            })
     }, []);
 
     return (
@@ -27,9 +43,17 @@ function Home(){
                 </button>
             </header>
 
-            <div class='food-container'>
-                {foods?.map((food) => (
-                    <FoodCard key={food.id} product={food}/>
+            <div class='fruits-container'>
+                <h2 class='fruits-title'>Fruits</h2>
+                {fruits?.map((fruit) => (
+                    <FoodCard key={fruit.id} product={fruit}/>
+                ))}
+            </div>
+
+            <div class = 'veggies-container'>
+                <h2 class='veggies-title'>Vegetables</h2>
+                {veggies?.map((veggie) => (
+                    <FoodCard key={veggie.id} product={veggie}/>
                 ))}
             </div>
 

@@ -7,7 +7,8 @@ function FoodCard({ product }){
     return (
         <div class='food-card'>
             <img class='food-img' alt={`${product.name}_img`} src={product.image} />
-            <p>{product.name}</p>
+            <h3 class='product-name'>{product.name}</h3>
+            <p class='product-price'>Price: ${product.price} / {product.quantity}</p>
             <button class='add-to-cart-bttn'>Add</button>
         </div>
     )

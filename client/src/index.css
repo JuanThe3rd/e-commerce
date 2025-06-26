@@ -3,6 +3,7 @@
   --header: #fff;
   --link: #61dafb;
   --text: hsla(0, 0%, 100%, 0.88);
+  font-family: sans-serif, optima;
   overflow-x: hidden;
 }
 
@@ -13,49 +14,7 @@
 
 
 
-/*
-.button-8 {
-  background-color: #e1ecf4;
-  border-radius: 3px;
-  border: 1px solid #7aa7c7;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #39739d;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px .8em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
-}
 
-.button-8:hover,
-.button-8:focus {
-  background-color: #b3d3ea;
-  color: #2c5777;
-}
-
-.button-8:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.button-8:active {
-  background-color: #a0c7e4;
-  box-shadow: none;
-  color: #2c5777;
-}
-*/
 
 /*<----------     Home Page     ---------->*/
 .home-header {
@@ -160,12 +119,33 @@
   width: 1.7rem;
 }
 
-.food-container {
+.fruits-title {
+  margin-top: -4rem;
+  position: absolute;
+}
+
+.fruits-container {
   column-gap: 2vw;
   display: grid;
   grid-template-columns: 20vw 20vw 20vw 20vw;
   margin-left: 6.5vw;
-  margin-top: 12rem;
+  margin-top: 13rem;
+  position: absolute;
+  row-gap: 1.5vw;
+  width: 100vw;
+}
+
+.veggies-title {
+  margin-top: -4rem;
+  position: absolute;
+}
+
+.veggies-container {
+  column-gap: 2vw;
+  display: grid;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  margin-left: 6.5vw;
+  margin-top: 65rem;
   position: absolute;
   row-gap: 1.5vw;
   width: 100vw;
@@ -176,9 +156,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 15px;
   font-family: sans-serif, optima;
-  font-weight: bold;
-  font-size: 1.5rem;
-  height: 18rem;
+  height: 17.5rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
   text-align: center;
@@ -190,6 +168,16 @@
   height: 11rem;
 }
 
+.product-name {
+  font-size: 1.5rem;
+}
+
+.product-price {
+  margin-left: 1rem;
+  margin-top: 0;
+  position: absolute;
+}
+
 .add-to-cart-bttn {
   align-items: center;
   background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
@@ -198,6 +186,7 @@
   border: none;
   border-radius: 6px;
   color: #fff;
+  cursor: pointer;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
   height: 2rem;
   margin-right: -11rem;
@@ -217,8 +206,8 @@
 
 .home-footer {
   background-color: rgb(113, 255, 170);
-  bottom: -25rem;
   height: 10rem;
+  margin-top: 90rem;
   margin-left: -0.5rem;
   position: absolute;
   width: 100vw;
